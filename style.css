@@ -1,0 +1,119 @@
+/* ======= CONFIGURAÇÃO GERAL ======= */
+body {
+  background-image: url('imagens/ceu.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+
+.titulo-com-imagens {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.titulo-com-imagens img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.titulo-com-imagens span {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff;
+}
+
+.subtitulo {
+  margin-top: 10px;
+  font-size: 1em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* ======= BLOCOS DE CONTEÚDO ======= */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.imagem-starwars,
+.imagem-dc {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.imagem-starwars img,
+.imagem-dc img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-starwars p,
+.imagem-dc p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #ffd700,
+    0 0 20px #ffd700,
+    0 0 30px #ff8c00,
+    0 0 40px #ff8c00,
+    0 0 50px #ff8c00;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media screen and (max-width: 600px) {
+  .titulo-com-imagens {
+    flex-direction: column;
+  }
+
+  .titulo-com-imagens span {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .imagem-starwars img,
+  .imagem-dc img {
+    width: 100px;
+  }
+
+  .imagem-starwars,
+  .imagem-dc {
+    width: 80%;
+  }
+}
