@@ -64,7 +64,8 @@ main {
 }
 
 .imagem-starwars,
-.imagem-dc {
+.imagem-dc,
+.imagem-dexter {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 15px 25px;
@@ -73,15 +74,15 @@ main {
 }
 
 .imagem-starwars img,
-.imagem-dc img {
+.imagem-dc img,
+.imagem-dexter img {
   width: 150px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.imagem-starwars p,
-.imagem-dc p {
+.imagem-starwars p {
   margin-top: 10px;
   font-size: 1.2em;
   color: white;
@@ -96,6 +97,29 @@ main {
     0 0 50px #ff8c00;
 }
 
+.imagem-dc p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #00BFFF;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #00BFFF,
+    0 0 10px #00BFFF,
+    0 0 15px #1E90FF,
+    0 0 20px #1E90FF;
+}
+
+.imagem-dexter p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #FF4444;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #FF4444,
+    0 0 10px #FF0000,
+    0 0 15px #8B0000;
+}
+
 /* ======= RESPONSIVIDADE ======= */
 @media screen and (max-width: 600px) {
   .titulo-com-imagens {
@@ -108,12 +132,14 @@ main {
   }
 
   .imagem-starwars img,
-  .imagem-dc img {
+  .imagem-dc img,
+  .imagem-dexter img {
     width: 100px;
   }
 
   .imagem-starwars,
-  .imagem-dc {
+  .imagem-dc,
+  .imagem-dexter {
     width: 80%;
   }
 }
