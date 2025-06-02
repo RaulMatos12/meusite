@@ -11,6 +11,11 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* ======= CABEÇALHO ======= */
 header {
   background-color: rgba(0, 0, 0, 0.6);
@@ -120,6 +125,58 @@ main {
     0 0 15px #8B0000;
 }
 
+/* ======= BLOCOS LADO A LADO (DC + JAMES) ======= */
+.imagem-dc-james {
+  display: flex;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 180px; /* altura fixa para a linha preencher */
+}
+
+.imagem-dc-james a {
+  text-align: center;
+  color: #00BFFF;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #00BFFF,
+    0 0 10px #00BFFF,
+    0 0 15px #1E90FF,
+    0 0 20px #1E90FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagem-dc-james img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-dc-james a:last-child img {
+  width: 150px; /* igual tamanho da DC */
+}
+
+.imagem-dc-james p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Linha separadora */
+.imagem-dc-james .separator {
+  width: 2px;
+  height: 100%;
+  background-color: #00BFFF;
+  margin: 0 15px;
+  align-self: stretch;
+}
+
 /* ======= RESPONSIVIDADE ======= */
 @media screen and (max-width: 600px) {
   .titulo-com-imagens {
@@ -141,5 +198,18 @@ main {
   .imagem-dc,
   .imagem-dexter {
     width: 80%;
+  }
+
+  .imagem-dc-james {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imagem-dc-james img {
+    width: 100px !important;
+  }
+
+  .imagem-dc-james .separator {
+    display: none;
   }
 }
